@@ -1,0 +1,51 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-image: url('Bg.png'); /* Replace with the correct image path */
+  background-size: cover;         /* Ensures the image covers the entire screen */
+  background-position: center;    /* Centers the image */
+  background-attachment: fixed;   /* Keeps the background fixed while scrolling */
+  background-repeat: no-repeat;   /* Prevents tiling */
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(34, 34, 34, 0.9); /* Adds transparency for better aesthetics */
+  color: #fff;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  
+}
+
+.about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
