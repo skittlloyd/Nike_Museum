@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: rgba(0, 0, 0, 0.3)url('photos/Bg.png') no-repeat center/cover;
+  background-size: cover; /* Ensures the image covers the entire body */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+}
+
+
+/* General Header and Navigation Styles */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #fff;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+/* Menu */
+.menu {
+  display: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.menu:focus {
+  outline: none;
+}
+
+/* General Navigation Styling */
+nav ul {
+  display: flex; /* Default: horizontal menu */
+  flex-direction: row; /* Align items horizontally */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px; /* Space between menu items */
+}
+
+nav ul li {
+  list-style: none;
+  text-align: center; /* Center text inside the li */
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff; /* Change color from white (#fff) to #333 */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  color: #666; /* Optional: Slightly lighter color on hover */
+}
+
+
+/* Menu Styling for Small Screens */
+.menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide horizontal menu */
+    flex-direction: column; /* Stack items vertically in mobile */
+    position: absolute;
+    top: 120%; /* Position below header */
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(8px); /* Blur effect for background */
+    border: 2px solid #333; /* Dark border */
+    z-index: 1000; /* Ensure it appears above other elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.show {
+    display: flex; /* Show menu on click */
+  }
+
+  .menu {
+    display: block; /* Show menu button on small screens */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  nav ul li {
+    text-align: center; /* Ensure the text is centered in the mobile version as well */
+    width: 100%; /* Ensure the menu items take up full width in mobile */
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 30px 70px;
+  color: black; /* Retain text color */
+  background-color: transparent; /* Ensure no background color */
+}
+
+
+
+.hero h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-items: center; /* Center all grid items */
+}
+
+/* Notification */
+.notification {
+  margin: 10px 0;
+  padding: 10px;
+  backdrop-filter: blur(8px); /* Blur effect for background */
+  border: 2px solid #333; /* Dark border */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for a lifted effect */
+  text-align: center;
+}
+
+.notification marquee {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333; /* Dark text for contrast */
+  white-space: nowrap;
+}
+
+.shoe-card {
+  width: 350px; /* Set a consistent width for the cards */
+  height: 180px; /* Set a fixed height for a rectangular shape */
+  perspective: 1000px;
+  border: 2px solid #333; /* Add a border around the cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Prevent content from overflowing the rounded corners */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px; /* Apply rounded corners to both the front and back */
+}
+
+.card-front {
+  background-color: #transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  backdrop-filter: blur(8px);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.shoe-card img {
+  max-width: 100%;
+  max-height: 80%;
+  border-radius: 8px;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5)); /* Drop shadow effect */
+  background-color: transparent; /* Ensures PNG transparency is preserved */
+}
+
+
+.shoe-card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.shoe-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shoe-card.glow {
+  box-shadow: 0 0 15px 5px #rgba(0, 0, 0, 0.2); /* Yellow glow */
+  border-color: #fff; /* Optional: change border color */
+}
+
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+}
