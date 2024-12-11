@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-image: url('Bg.png'); /* Replace 'Bg.png' with the correct image path */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Makes the background image stay fixed while scrolling */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between; /* Aligns items on the left and right */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent background for better readability */
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left; /* Ensures the text aligns to the left */
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  color: #333; /* Change text color for better contrast against the background */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for readability */
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input, 
+.contact textarea, 
+.contact button {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  border: 1px solid #ccc; /* Default border color */
+  border-radius: 5px; /* Optional for rounded edges */
+}
+
+/* Focus effect */
+.contact input:focus, 
+.contact textarea:focus {
+  border: 2px solid gray; /* Changes border color to gray */
+  outline: none; /* Removes default focus outline */
+  box-shadow: none; /* Removes additional focus effects */
+}
+
+.contact button {
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: gray;
+}
+
